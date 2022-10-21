@@ -10,8 +10,8 @@ program.name('gendiff')
     .argument('<filepath1> <filepath2>')
     .option('-V, --version', 'output the version number')
     .option('-f, --format <type>', 'output format')
-    .action(function (arg, options) {
-       genDiff(options.rawArgs[2], options.rawArgs[3])
+    .action(function (first, second, options) {
+       genDiff(first, options.rawArgs[3])
     })
 
 
